@@ -1,5 +1,12 @@
 package com.example.quinngil.myapplication;
 
+import com.example.quinngil.myapplication.simple.SimpleApi;
+import com.example.quinngil.myapplication.simple.SimpleApiErrorResponse;
+import com.example.quinngil.myapplication.simple.SimpleApiErrorResponseJsonAdapter;
+import com.example.quinngil.myapplication.simple.SimpleApiResponse;
+import com.example.quinngil.myapplication.simple.SimpleApiResponseJsonAdapter;
+import com.example.quinngil.myapplication.simple.network.RetrofitException;
+import com.example.quinngil.myapplication.simple.network.RxErrorHandlingCallAdapterFactory;
 import com.squareup.moshi.Moshi;
 
 import org.junit.Before;
@@ -38,6 +45,7 @@ public class SimpleApiMockingTest {
                 .build();
 
     }
+
     @Test
     public void successResponse(){
         final NetworkBehavior networkBehavior = NetworkBehavior.create();
