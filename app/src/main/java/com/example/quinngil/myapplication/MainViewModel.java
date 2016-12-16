@@ -2,7 +2,7 @@ package com.example.quinngil.myapplication;
 
 import com.example.quinngil.myapplication.simple.SimpleApiResponse;
 
-//Understands how to display view data
+//Understands how to render view data
 /* package */ class MainViewModel {
 
     private MainActivity mainActivity;
