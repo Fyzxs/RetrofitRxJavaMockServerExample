@@ -1,5 +1,7 @@
 package com.example.quinngil.myapplication.simple;
 
+import android.widget.TextView;
+
 public class SimpleApiResponse {
 
     private final String firstName;
@@ -8,7 +10,7 @@ public class SimpleApiResponse {
         this.firstName = firstName;
     }
 
-    public String welcomeMessage(){
-        return "Good day, " + firstName + ". The time is currently Fake o'clock";
+    public void writeWelcomeMessage(TextView textView){
+        textView.setText("Good day, " + firstName + ". The time is currently Fake o'clock");
     }
 }

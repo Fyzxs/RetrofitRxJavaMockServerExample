@@ -26,7 +26,7 @@ public class MainActivity extends BaseActivity {
 
     @Override
     protected void postOnResume(){
-        mainViewModel.prepare();
+        mainViewModel.render();
     }
 
     /* protected */ TextView getSimpleView(){

@@ -64,7 +64,6 @@ public class SimpleApiMockingTest {
         //Assert
         testSubscriber.assertValueCount(1);
         testSubscriber.assertCompleted();
-        assertThat(testSubscriber.getOnNextEvents().get(0).welcomeMessage()).isEqualTo("Good day, AFirstName. The time is currently Fake o'clock");
     }
 
     @Test
