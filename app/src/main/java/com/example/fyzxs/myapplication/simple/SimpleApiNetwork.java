@@ -10,7 +10,8 @@ import retrofit2.Converter;
 import retrofit2.Retrofit;
 import retrofit2.converter.moshi.MoshiConverterFactory;
 
-public class SimpleApiNetwork {
+
+/* package */ class SimpleApiNetwork {
 
     //This is a boundary layer, this is allowing us to fake
     private static HttpUrl serverUrl;

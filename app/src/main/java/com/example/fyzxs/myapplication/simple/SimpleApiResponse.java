@@ -2,6 +2,9 @@ package com.example.fyzxs.myapplication.simple;
 
 import android.widget.TextView;
 
+import com.example.fyzxs.myapplication.R;
+import com.example.fyzxs.myapplication.app.FyzApp;
+
 public class SimpleApiResponse {
 
     private final String firstName;
@@ -10,7 +13,9 @@ public class SimpleApiResponse {
         this.firstName = firstName;
     }
 
-    public void writeWelcomeMessage(TextView textView){
-        textView.setText("Good day, " + firstName + ". The time is currently Fake o'clock");
+    public void writeWelcomeMessage(final TextView textView){
+        textView.setText(
+                FyzApp.applicationInstance().getString(
+                        R.string.simple_api_response_personalized_greeting, firstName));
     }
 }

@@ -1,4 +1,4 @@
-package com.example.fyzxs.myapplication.shell;
+package com.example.fyzxs.myapplication.shell.activity;
 
 import com.example.fyzxs.myapplication.main.MainActivity;
 

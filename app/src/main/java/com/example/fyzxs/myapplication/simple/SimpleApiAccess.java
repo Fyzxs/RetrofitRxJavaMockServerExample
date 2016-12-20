@@ -8,6 +8,6 @@ import rx.Observable;
 public class SimpleApiAccess {
 
     public Observable<SimpleApiResponse> latestSimpleApiResponse(){
-        return NetworkCall.create().getSimpleResponse();
+        return SimpleApiNetwork.create().getSimpleResponse();
     }
 }

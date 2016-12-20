@@ -2,15 +2,15 @@ package com.example.fyzxs.myapplication.app;
 
 import android.app.Application;
 
-public class App extends Application {
+public class FyzApp extends Application {
 
-    private static App instance;
+    private static FyzApp instance;
 
     /**
      * It's how we get a globally available context without the Context param chain
      * @return
      */
-    public static App applicationInstance(){
+    public static FyzApp applicationInstance(){
         return instance;
     }
 

@@ -11,8 +11,10 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         FyzLog.v("super.onCreate done");
+
         postOnCreate(savedInstanceState);
         FyzLog.v("postOnCreate done");
+
         bindViews();
         FyzLog.v("bindViews done");
     }
@@ -31,6 +33,7 @@ public abstract class BaseActivity extends AppCompatActivity {
     protected void onResume(){
         super.onResume();
         FyzLog.v("super.onResume done");
+
         postOnResume();
         FyzLog.v("postOnResume done");
     }

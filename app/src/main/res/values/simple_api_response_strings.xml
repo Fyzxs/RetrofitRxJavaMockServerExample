@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="simple_api_response_personalized_greeting">Good day, %s. The time is currently Fake o'clock</string>
+</resources>
