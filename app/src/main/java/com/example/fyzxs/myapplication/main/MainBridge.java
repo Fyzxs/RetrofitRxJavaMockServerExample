@@ -4,26 +4,31 @@ import com.example.fyzxs.myapplication.log.FyzLog;
 import com.example.fyzxs.myapplication.simple.SimpleApiResponse;
 
 //Understands how to render view data
-/* package */ class MainViewModel {
+/* package */ class MainBridge {
 
     private MainActivity mainActivity;
-    private MainModel mainModel;
+    private MainMediator mainMediator;
 
-    /* package */ MainViewModel(MainActivity mainActivity){
+    /* package */ MainBridge(MainActivity mainActivity){
         this(mainActivity, null);
     }
-    /* package */ MainViewModel(MainActivity mainActivity, MainModel mainModel){
+    /* package */ MainBridge(MainActivity mainActivity, MainMediator mainMediator){
         this.mainActivity = mainActivity;
-        this.mainModel = mainModel != null ? mainModel : new MainModel(this);
+        this.mainMediator = mainMediator != null ? mainMediator : new MainMediator(this);
     }
 
 
     /* package */ void render() {
-        mainModel.retrieve();
+        mainMediator.retrieve();
     }
 
     /* package */ void renderSimpleApiResponse(SimpleApiResponse simpleApiResponse) {
         FyzLog.v("rendering SimpleApiResponse");//This is to blow up android.util.log
         simpleApiResponse.writeWelcomeMessage(mainActivity.getSimpleView());
+        //Alternate method of writing data
+        final StringBuilder sb = new StringBuilder();
+        simpleApiResponse.writeWelcomeMessageTo(sb);
+        mainActivity.updateSimpleView(sb.toString());
+
     }
 }

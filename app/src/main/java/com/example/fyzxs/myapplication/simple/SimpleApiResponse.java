@@ -18,4 +18,9 @@ public class SimpleApiResponse {
                 FyzApp.applicationInstance().getString(
                         R.string.simple_api_response_personalized_greeting, firstName));
     }
+
+    public void writeWelcomeMessageTo(final StringBuilder sb) {
+        sb.append(FyzApp.applicationInstance().getString(
+                R.string.simple_api_response_personalized_greeting, firstName));
+    }
 }

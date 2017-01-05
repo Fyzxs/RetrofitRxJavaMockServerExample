@@ -10,10 +10,10 @@ import com.example.fyzxs.myapplication.R;
 public abstract class MainActivity extends BaseActivity {
 
     private TextView simple;
-    private MainViewModel mainViewModel;
+    private MainBridge mainBridge;
 
     public MainActivity(){
-        mainViewModel = new MainViewModel(this);
+        mainBridge = new MainBridge(this);
     }
 
     @Override
@@ -29,10 +29,14 @@ public abstract class MainActivity extends BaseActivity {
 
     @Override
     protected void postOnResume(){
-        mainViewModel.render();
+        mainBridge.render();
     }
 
     /* protected */ TextView getSimpleView(){
         return simple;
+    }
+
+    public void updateSimpleView(final String value) {
+        simple.setText(value);
     }
 }

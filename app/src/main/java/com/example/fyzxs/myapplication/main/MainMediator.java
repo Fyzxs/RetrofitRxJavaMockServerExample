@@ -3,12 +3,12 @@ package com.example.fyzxs.myapplication.main;
 import com.example.fyzxs.myapplication.simple.SimpleApiAccess;
 
 //Understands where the data for view lives
-/* package */ class MainModel {
+/* package */ class MainMediator {
 
-    private final MainViewModel mainViewModel;
+    private final MainBridge mainBridge;
 
-    /* package */ MainModel(MainViewModel mainViewModel) {
-        this.mainViewModel = mainViewModel;
+    /* package */ MainMediator(MainBridge mainBridge) {
+        this.mainBridge = mainBridge;
     }
 
     /* package */ void retrieve() {
@@ -16,6 +16,6 @@ import com.example.fyzxs.myapplication.simple.SimpleApiAccess;
     }
 
     private void retrieveSimpleApiResponse() {
-        new SimpleApiAccess().latestSimpleApiResponse().subscribe(mainViewModel::renderSimpleApiResponse);
+        new SimpleApiAccess().latestSimpleApiResponse().subscribe(mainBridge::renderSimpleApiResponse);
     }
 }
